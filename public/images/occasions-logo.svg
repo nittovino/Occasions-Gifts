@@ -1,0 +1,11 @@
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stylized Gift/Ribbon Icon -->
+  <path d="M35 25C35 25 28 10 15 10C7 10 2 15 2 22C2 29 10 35 35 35ZM35 25C35 25 42 10 55 10C63 10 68 15 68 22C68 29 60 35 35 35Z" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  <rect x="20" y="35" width="30" height="30" rx="2" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  <line x1="35" y1="35" x2="35" y2="65" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="20" y1="50" x2="50" y2="50" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="80" y="45" font-family="serif" font-weight="bold" font-size="36" fill="#D4AF37">Occasions</text>
+  <text x="82" y="68" font-family="sans-serif" font-weight="500" font-size="12" fill="#E2E8F0" letter-spacing="4">GIFTS</text>
+</svg>

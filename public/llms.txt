@@ -1,0 +1,37 @@
+## Pages
+- [-](/home): No description available
+- [-](/storeportal): Manage your store
+- [-](/sympathyhub): No description available
+- [- Occasions Gifts](/browseshop): No description available
+- [- Occasions Gifts](/cart): Your shopping cart
+- [- Occasions Gifts](/checkout): Complete your order
+- [- Occasions Gifts](/claimgiftcard): Claim your gift card balance
+- [- Occasions Gifts](/giftcards): Purchase gift cards for your loved ones
+- [- Occasions Gifts](/holidays): No description available
+- [- Occasions Gifts](/occasions): No description available
+- [- Occasions Gifts](/orderconfirmation): Your order has been confirmed
+- [- Occasions Gifts](/productdetail): No description available
+- [- Occasions Gifts](/sympathybaskets): No description available
+- [- Occasions Gifts](/sympathyflowers): No description available
+- [- Occasions Gifts](/sympathymemorial): No description available
+- [- Occasions Gifts](/sympathy): No description available
+- [About Us - Occasions Gifts](/aboutus): Learn about Occasions Gifts, our mission, values, and the team behind the premium gift delivery service.
+- [Admin Portal - Occasions Gifts](/adminportal): Admin dashboard
+- [Contact Us - Occasions Gifts](/contactus): Get in touch with Occasions Gifts. We
+- [Cookie Policy - Occasions Gifts](/cookiepolicy): Learn how Occasions Gifts uses cookies to improve your browsing experience.
+- [Join Loyalty - Occasions Gifts](/loyaltydashboard): No description available
+- [Loyalty Admin - Occasions Gifts](/adminloyaltypanel): No description available
+- [Loyalty Analytics - Occasions](/adminloyaltyanalytics): No description available
+- [Manage Orders - Occasions Gifts](/ordersmanagement): No description available
+- [Manage Payouts - Occasions Gifts](/payoutsmanagement): No description available
+- [Manage Products - Occasions Gifts](/productsmanagement): No description available
+- [Merchant Onboarding - Occasions Gifts](/merchantonboarding): No description available
+- [My Account - Occasions Gifts](/account): No description available
+- [Occasions Gifts -](/affiliateprogram): No description available
+- [Occasions Gifts -](/affiliatesignup): No description available
+- [Occasions Gifts - Success](/affiliateconfirmation): No description available
+- [Privacy Policy - Occasions Gifts](/privacypolicy): Read our Privacy Policy to understand how Occasions Gifts collects, uses, and protects your data in compliance with GDPR.
+- [Store Dashboard - Occasions Gifts](/storedashboard): No description available
+- [Store Settings - Occasions Gifts](/storesettings): No description available
+- [Terms of Service - Occasions Gifts](/termsofservice): Read the Terms of Service for using Occasions Gifts platform.
+- [Your Gift Card - Occasions Gifts](/giftcard): View, manage, and share your generated gift card.

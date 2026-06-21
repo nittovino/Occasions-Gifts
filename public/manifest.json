@@ -1,0 +1,20 @@
+{
+  "short_name": "Occasions",
+  "name": "Occasions Gifts",
+  "icons": [
+    {
+      "src": "https://horizons-cdn.hostinger.com/ff127f75-941b-4fb4-a5da-6d2a6491255b/9246b75eb6dba13eedd75ffc6cf90b3e.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://horizons-cdn.hostinger.com/ff127f75-941b-4fb4-a5da-6d2a6491255b/9246b75eb6dba13eedd75ffc6cf90b3e.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1a2a4a",
+  "background_color": "#1a2a4a"
+}
