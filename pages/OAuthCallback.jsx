@@ -113,8 +113,12 @@ const OAuthCallback = () => {
 
           console.log("[OAuthCallback] 2b. Hash tokens set successfully.");
 
-          // For hash-token flow, directly verify session without waiting for listener
+          // For hash-token flow, immediately check session without listener delay
           console.log("[OAuthCallback] 3. Verifying session after setSession...");
+          
+          // Small delay to allow localStorage to sync
+          await new Promise(resolve => setTimeout(resolve, 100));
+          
           const { data: { session }, error: getSessionError } = await supabase.auth.getSession();
 
           if (getSessionError) {
