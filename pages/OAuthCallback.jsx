@@ -77,6 +77,16 @@ const OAuthCallback = () => {
             throw new Error(exchangeError.message || "Failed to exchange authentication code.");
           }
           console.log("[OAuthCallback] Code exchanged successfully.");
+          
+          console.log("[OAuthCallback] 3. Waiting for session confirmation...");
+          const session = await waitForSession();
+
+          if (session) {
+            console.log("[OAuthCallback] 4. Session confirmed, redirecting to home.");
+            navigate('/');
+          } else {
+            throw new Error("Failed to confirm session after authentication.");
+          }
         } else if (hasHashToken) {
           // Mobile OAuth flow: handle access_token from hash fragment
           console.log("[OAuthCallback] 2. Processing hash token from mobile callback...");
@@ -102,16 +112,22 @@ const OAuthCallback = () => {
           }
 
           console.log("[OAuthCallback] 2b. Hash tokens set successfully.");
-        }
 
-        console.log("[OAuthCallback] 3. Waiting for session confirmation...");
-        const session = await waitForSession();
+          // For hash-token flow, directly verify session without waiting for listener
+          console.log("[OAuthCallback] 3. Verifying session after setSession...");
+          const { data: { session }, error: getSessionError } = await supabase.auth.getSession();
 
-        if (session) {
-          console.log("[OAuthCallback] 4. Session confirmed, redirecting to home.");
-          navigate('/');
-        } else {
-          throw new Error("Failed to confirm session after authentication.");
+          if (getSessionError) {
+            console.error("[OAuthCallback] Get session error:", getSessionError);
+            throw new Error(getSessionError.message || "Failed to retrieve session after authentication.");
+          }
+
+          if (session) {
+            console.log("[OAuthCallback] 4. Session verified, redirecting to home.");
+            navigate('/');
+          } else {
+            throw new Error("Failed to confirm session after authentication.");
+          }
         }
       } catch (err) {
         console.error('[OAuthCallback] Callback error:', err);
