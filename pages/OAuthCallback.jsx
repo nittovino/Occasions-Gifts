@@ -47,6 +47,17 @@ const OAuthCallback = () => {
       });
     };
 
+    const parseHashToken = () => {
+      const hash = window.location.hash.substring(1);
+      if (!hash) return { access_token: null, refresh_token: null };
+
+      const params = new URLSearchParams(hash);
+      return {
+        access_token: params.get('access_token'),
+        refresh_token: params.get('refresh_token')
+      };
+    };
+
     const handleCallback = async () => {
       try {
         const code = searchParams.get('code');
@@ -66,6 +77,31 @@ const OAuthCallback = () => {
             throw new Error(exchangeError.message || "Failed to exchange authentication code.");
           }
           console.log("[OAuthCallback] Code exchanged successfully.");
+        } else if (hasHashToken) {
+          // Mobile OAuth flow: handle access_token from hash fragment
+          console.log("[OAuthCallback] 2. Processing hash token from mobile callback...");
+          const { access_token, refresh_token } = parseHashToken();
+
+          if (!access_token) {
+            throw new Error("Access token not found in authentication response.");
+          }
+
+          if (!refresh_token) {
+            throw new Error("Refresh token missing. Session may not persist. Please try logging in again.");
+          }
+
+          console.log("[OAuthCallback] 2a. Setting session from hash tokens...");
+          const { error: setSessionError } = await supabase.auth.setSession({
+            access_token,
+            refresh_token
+          });
+
+          if (setSessionError) {
+            console.error("[OAuthCallback] Set session error:", setSessionError);
+            throw new Error(setSessionError.message || "Failed to establish session from authentication tokens.");
+          }
+
+          console.log("[OAuthCallback] 2b. Hash tokens set successfully.");
         }
 
         console.log("[OAuthCallback] 3. Waiting for session confirmation...");
